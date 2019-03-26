@@ -1,0 +1,18 @@
+body {
+    background-image: 
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-around;
+    background-color: #E70012;
+    background-size: cover;
+    color: white;
+    font-size: 12px;
+
+}
+
+.menu {
+    height: 75px;
+    }
