@@ -3,7 +3,8 @@
 /*-----MAIN BODY-----*/
 
 body {
-    background-image: url(images/Super_Mario_background.png);
+    /*    background-image: url(images/Super_Mario_background.png);*/
+    background-color: black;
     margin: 0px;
 }
 
@@ -47,6 +48,11 @@ h1 {
     height: 75px;
 }
 
+.card-body {
+/*    background-color: black;*/
+
+}
+
 .card-title {
     display: flex;
     align-content: center;
@@ -56,12 +62,3 @@ h1 {
 
 
 /*-----GAME CARDS-----*/
-
-
-
-
-
-
-
-
-
