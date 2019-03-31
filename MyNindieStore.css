@@ -167,6 +167,7 @@ h1 {
 
 .cards-in-pairs {
     padding-top: 15px;
+    padding-bottom: 330px;
 }
 
 .two-cards {
@@ -180,13 +181,21 @@ h1 {
     height: 180px;
 }
 
+.game-info {
+    border: 2px #E70012 solid;
+    height: 150px;
+    padding-bottom: 125px;
+    border-radius: 20px;
+}
+
 .game-title,
 .game-release,
 .game-price {
     color: white;
     font-family: 'Mina', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
+    margin-bottom: 6px;
 }
 
 .game-title {
