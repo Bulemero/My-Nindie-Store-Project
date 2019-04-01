@@ -36,7 +36,7 @@ header {
     font-family: 'Mina', sans-serif;
 }
 
-.modal-body1 {
+.modal-main-menu {
     background-color: #E70012;
     text-align: center;
     font-family: 'Mina', sans-serif;
@@ -201,3 +201,93 @@ h1 {
 .game-title {
     font-weight: bold;
 }
+
+
+
+/*-----DEALS CARDS-----*/
+
+/*-----Gamers Deal-----*/
+
+
+.gamer-title {
+    color: #E70012;
+    font-family: 'Mina', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.gamer-disclaimer {
+    color: navy;
+    font-family: 'Mina', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #f8f9fa80;
+}
+
+.gamer-info {
+    color: navy;
+    font-family: 'Mina', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: #f8f9fa80;
+    margin-top: 310px;
+}
+
+/*-----Friends Deal-----*/
+
+.friends-title {
+    color: limegreen;
+    font-family: 'Mina', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.friends-disclaimer {
+    color: #ffb725;
+    font-family: 'Mina', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #31323280;
+}
+
+.friends-info {
+    color: #ffb725;
+    font-family: 'Mina', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: #31323280;
+    margin-top: 220px;
+}
+
+/*-----FOLLOW US CARDS-----*/
+
+.socialmedia {
+    background-image: url(images/followus/socialmedia_mashup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.socialmedia-title {
+    color: white;
+    text-align: center;
+    font-family: 'Mina', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 300px;
+    margin-top: 50px;
+}
+
+.socialmedia-disclaimer {
+    color: white;
+    text-align: center;
+    font-family: 'Mina', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+        
+}
+
+
