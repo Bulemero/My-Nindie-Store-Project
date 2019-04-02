@@ -20,7 +20,7 @@ var myVueObject = new Vue({
                 "price": "19.99€",
                 "release_date": "Spring 2019",
                 "number_of_players": "1-2",
-                "pegi": "12",
+                "pegi": "12+",
                 "developer": "Brace Yourself Games",
                 "publisher": "Nintendo",
                },
@@ -41,7 +41,7 @@ var myVueObject = new Vue({
                 "price": "19.99€",
                 "release_date": "April 18, 2019",
                 "number_of_players": "1-2",
-                "pegi": "7",
+                "pegi": "7+",
                 "developer": "Studio MDHR",
                 "publisher": "Studio MDHR",
                },
@@ -62,7 +62,7 @@ var myVueObject = new Vue({
                 "price": "9.99€",
                 "release_date": "March 20, 2019",
                 "number_of_players": "1",
-                "pegi": "12",
+                "pegi": "12+",
                 "developer": "INTI CREATES CO., LTD.",
                 "publisher": "INTI CREATES CO., LTD.",
                },
@@ -83,7 +83,7 @@ var myVueObject = new Vue({
                 "price": "14.99€",
                 "release_date": "Summer 2019",
                 "number_of_players": "1",
-                "pegi": "12",
+                "pegi": "12+",
                 "developer": "Paper Cult",
                 "publisher": "Paper Cult",
                },
@@ -104,7 +104,7 @@ var myVueObject = new Vue({
                 "price": "12.99€",
                 "release_date": "Summer 2019",
                 "number_of_players": "1",
-                "pegi": "7",
+                "pegi": "7+",
                 "developer": "Flight School Studio",
                 "publisher": "Flight School Studio",
                },
@@ -125,9 +125,9 @@ var myVueObject = new Vue({
                 "price": "14.99€",
                 "release_date": "April 18, 2019",
                 "number_of_players": "1",
-                "pegi": "16",
-                "developer": "Devolver Digital",
-                "publisher": "Askiisoft",
+                "pegi": "16+",
+                "developer": "Askiisoft",
+                "publisher": "Devolver Digital",
                },
 
             {
@@ -142,13 +142,13 @@ var myVueObject = new Vue({
 
                 "game_info": "Full Throttle Gun Ballet: Unleash a torrent of destruction with an incredible level of control over both your weapons and your body. Twist and turn through the air while aiming both hands at priority threats or line up a perfect ricochet to drop an unsuspecting gangster from behind. Mix It Up: Break up the high octane running and gunning a bit with dynamic sequences like a thrilling motorcycle chase or slow it all down and take a moment to think through a series of clever (and possibly fatal) physics-based puzzles. Slow Motion Braggadocio: When the action amps up to a frenzy, bring it all into focus by shifting into slow motion to calm the nerves and steady the aim.",
 
-                "category": "Action, Arcade, Strategy, Platformer",
+                "category": "Action",
                 "price": "14.99€",
-                "release_date": "April 18, 2019",
+                "release_date": "June 2019",
                 "number_of_players": "1",
-                "pegi": "16",
-                "developer": "Devolver Digital",
-                "publisher": "Askiisoft",
+                "pegi": "16+",
+                "developer": "Deadtoast",
+                "publisher": "Devolver Digital",
                },
             
             {
@@ -167,9 +167,9 @@ var myVueObject = new Vue({
                 "price": "14.99€",
                 "release_date": "Summer 2019",
                 "number_of_players": "1",
-                "pegi": "12",
-                "developer": "Fellow Traveller",
-                "publisher": "Chance Agency",
+                "pegi": "12+",
+                "developer": "Chance Agency",
+                "publisher": "Fellow Traveller",
                },
             
             {
@@ -188,7 +188,7 @@ var myVueObject = new Vue({
                 "price": "12.99€",
                 "release_date": "Summer 2019",
                 "number_of_players": "1",
-                "pegi": "7",
+                "pegi": "7+",
                 "developer": "Vlambeer",
                 "publisher": "Vlambeer",
                },
@@ -209,11 +209,136 @@ var myVueObject = new Vue({
                 "price": "14.99€",
                 "release_date": "Fall 2019",
                 "number_of_players": "1",
-                "pegi": "16",
+                "pegi": "16+",
                 "developer": "Finji",
                 "publisher": "Finji",
                },
             
+            {
+                "title": "Pine",
+                "subtitle": "Their story becomes yours.",
+
+                "main_image": "https://www.nintenderos.com/wp-content/uploads/2019/03/D2HMwgYUgAErOKR.jpg",
+                "trailer": "https://www.youtube.com/watch?v=JoP5Mm6H4fo",
+                "thumbnail": "https://media.nintendo.com/nintendo/bin/F6U83kbm-k7DiCKdbhJtVmp8q_R4oL9S/UwVz-NbabCbFOGWsGhSoMCZ5I07SG6CU.png",
+
+                "carousel": ["https://media.nintendo.com/nintendo/bin/dEVPRZV-_gEfIoqL77qEek53Is1wMqmY/BK7CT-bl-FUL_YNgM2c1JArustPAbzYJ.jpg", "https://media.nintendo.com/nintendo/bin/HvDjGB8GsJ8NgfDvoRE35d4ntYtzC3iy/rzrJnXek4uy-qwyW7XTWk0HTiXYSDKWO.jpg", "https://media.nintendo.com/nintendo/bin/HHk17iMJUj6FTnsL0I_mq11_J5SHiM58/Nk5zsqdsEUVEPhCyXFc_jJ_oXfy2uySm.jpg", "https://media.nintendo.com/nintendo/bin/cZgn38R37VMVoukhg4q86R9J4ZHaSprN/asf4Z_jrkUhV1n8KbSr9olC4fl3PU8ef.jpg", "https://media.nintendo.com/nintendo/bin/xjWVyDfFUPoLbucEn3hMaqPLqiBV_giI/fLJhZdvcbY8QWzCS7UN54Fw2Jc41jzty.jpg", "https://media.nintendo.com/nintendo/bin/qVslOLCNWopXdJrSBap9L2QglAiynjLa/JbePvZIn4cXWwwYSfyM48ahRj_zapvub.jpg"],
+
+                "game_info": "Pine is an open-world action adventure simulation game. Take on the role of Hue, a brave young adult who belongs to the last remaining tribe of humans on the island of Albamare. Find your way through an ever-changing world in which all creatures have lives, goals and quests of their own. Albamare’s factions trade and fight with each other over food and territory, while Hue learns about ways to influence the ecology, in search for a new home for the humans.",
+
+                "category": "Action, Adventure",
+                "price": "14.99€",
+                "release_date": "August 2019",
+                "number_of_players": "1",
+                "pegi": "7+",
+                "developer": "Twirlbound",
+                "publisher": "Kongregate",
+               },
+            
+            {
+                "title": "RAD",
+                "subtitle": "Double Apocalypse, bitchin’ mutations, and a sweet bat.",
+
+                "main_image": "https://www.gameprotv.com/archivos/201903/rad-principal.jpg",
+                "trailer": "https://www.youtube.com/watch?v=jTvxhA84lS8",
+                "thumbnail": "https://media.nintendo.com/nintendo/bin/VMb_EFvepe8xj1dNrRDHXL_9QawJFhAn/sCmZqSqRsVRDG6EVudUx7W6usDswX9VE.png",
+
+                "carousel": ["https://media.nintendo.com/nintendo/bin/-VJw8E5s4eL5fVUP8FaZf-nqE8pb_SPC/364IkaLgDvbZEJ0x95eTNeycFZq993Rp.jpg", "https://media.nintendo.com/nintendo/bin/QZi01N_w7H2HOhMf-SWDg2IL2iDM5cQz/B0vhYNTjs6NaVvnM7nPvYIaYDCeHofPf.jpg", "https://media.nintendo.com/nintendo/bin/l-uprzL5JZUbDNH4L_GuwA9uUxveuNp9/kfljuxfS-mv1HmyZQ0tm17I58CdFsmp-.jpg", "https://media.nintendo.com/nintendo/bin/vXV6PG0SSJCREGRedqaiztTdzf_1ZLKH/Nyh81YJ4Y0-VryO7hmX6bSQXtkTaLXlt.jpg", "https://media.nintendo.com/nintendo/bin/VmOuGfbtGE64rhVvlcc6cm0pIYrzsFnu/Vxq1jYAf8Zt4Nyk-wfQYU6ocM9URadbx.jpg"],
+
+                "game_info": "BANDAI NAMCO Entertainment America Inc. and DOUBLE FINE PRODUCTIONS are proud to bring you RAD – a 3D action rogue-like set in a post-post-apocalyptic world, where humanity has faced armageddon not once, but twice. Playing as a teenage protagonist, you must venture into the Fallow — an ever-changing, radioactive wasteland filled with unknown and unspeakable creatures. It is here that you will find the solution to heal the world, and transform the cracked, barren landscape into a lush source of new life. But humanity’s future comes at great personal cost, as the deeper you journey into unknown lands, the more you will expose yourself to gnarly toxins which will wreak havoc on your fragile human form. The fate of the world depends on you, your trusty bat, and whatever strange new abilities you gain as the world around you ravages your body — twisting and mutating you into something far less than human, but far more powerful. But forget all that — go grab that sweet bat and help save the world…or what’s remaining of it anyway!",
+
+                "category": "Action",
+                "price": "19.99€",
+                "release_date": "Summer 2019",
+                "number_of_players": "1",
+                "pegi": "12+",
+                "developer": "Double Fine Productions",
+                "publisher": "BANDAI NAMCO Entertainment America Inc.",
+               },
+            
+            {
+                "title": "Stranger Things 3: The Game",
+                "subtitle": "Developed and published by BonusXP in collaboration with Netflix, Stranger Things 3: The Game is the official companion game to Season 3 of the hit original series.",
+
+                "main_image": "https://www.nintenderos.com/wp-content/uploads/2019/03/D2HNwCkUcAAtRrN.jpg",
+                "trailer": "https://www.youtube.com/watch?v=_UuAzHWY8ng",
+                "thumbnail": "https://media.nintendo.com/nintendo/bin/bLA7mNPYGSo9Iz-MDJX5PaF-1gQOjwVg/Hi4udx39KIfJQJnK7NU0fFuXKGJ_8R9R.png",
+
+                "carousel": ["https://media.nintendo.com/nintendo/bin/KbS_oKvbb0bN2sFwkGiQ6AOrvBipWMVF/bWgOLHOh_o2VayNzXmdwZefYB69_us1v.jpg", "https://media.nintendo.com/nintendo/bin/uin6hBgMxYMhCp_gKOQ6lSdrSlc126s8/RYeAXeLdt-FEFfKh3cHKFpvzKTuw8oAt.jpg", "https://media.nintendo.com/nintendo/bin/O580fzrmY4-Pq51ojXGN6POfkuKi9t3j/oNvmSQx3DzM1Sc95Jzvx7ieFI-LUAZpZ.jpg", "https://media.nintendo.com/nintendo/bin/zyPKHtM2yOS_EfuXpzZIfqJ-c14UxKgK/ll_72yW3dupYzIcF1bqEm5yXtq_t8-8S.jpg", "https://media.nintendo.com/nintendo/bin/WtuOaU06EonuY-93Q1tnoEOE1_fRtDVA/7yG-bfri9sLl1vWYlNafErvGTNm19s8m.jpg", "https://media.nintendo.com/nintendo/bin/V-C_3LpnfcMo7SrXegzZRBdeNut_F7Ab/EIL9CAd4r038TGgY4-E0PCfaOj62D6CC.jpg"],
+
+                "game_info": "This adventure game blends a distinctively retro 16-bit art style with modern gameplay mechanics to deliver nostalgic fun with a fresh new twist. Fans will be able to experience their favorite show through a mix of exploration, puzzles, and combat. Just like in the show, teamwork is at the heart Stranger Things 3: The Game. Fans can team up in two player local co-op or in single player mode alongside an AI partner, in the role of one of twelve characters from the show, each with unique abilities and attributes. Together, they’ll play through familiar events from the series while also uncovering never-before-seen Stranger Things secrets, ensuring a fun experience for those new to the world of Stranger Things and series super fans alike!",
+
+                "category": "Action, Adventure",
+                "price": "19.99€",
+                "release_date": "July 04, 2019",
+                "number_of_players": "1-2",
+                "pegi": "12+",
+                "developer": "BonusXP / Netflix",
+                "publisher": "BonusXP / Netflix",
+               },
+            
+            {
+                "title": "Super Crate Box",
+                "subtitle": "Super Crate Box is coming to bring back the glory of the golden arcade age, when all that really mattered was getting on that high score list.",
+
+                "main_image": "https://media.nintendo.com/nintendo/bin/GXWVhpiMKR2HLiDdZN5qjQv9lyybWvY7/jxflM0PJpDXXTu-eFCUskJODMDp1hgAE.jpg",
+                "trailer": "https://www.youtube.com/watch?v=2-MV0uz6v4E",
+                "thumbnail": "https://media.nintendo.com/nintendo/bin/W1n7-VUYxo4hrZRNx-cP_bkxh-aWsn_c/EZkZocTky9jk10mgJ_wDrUOONZKj9yns.png",
+
+                "carousel": ["https://media.nintendo.com/nintendo/bin/hACs7n_X0DoEiGK2ILSVvcG9h5HZNwGc/6OkLNDoAc_GREVSHZ3hr_na2jlfu4mkp.jpg", "https://media.nintendo.com/nintendo/bin/mjD0zd1G7-Yr0vO1-it98iFijr2w0Hsb/DeRAYEIJnWrOylE_Mc9AzDD_qEyPG0Z6.jpg", "https://media.nintendo.com/nintendo/bin/L61Tig4cnTMwrygHKqlD1DOmaMe8UvdP/1lrRStnIcA8uIe7pbVchGOSngMhF7q2r.jpg", "https://media.nintendo.com/nintendo/bin/HrMh2odMuwv2C4_pEeC6U-ES-DME6tCT/VwlHuyAdr2QOpASSjO5Bun8OqsXBl-q3.jpg"],
+
+                "game_info": "Vlambeer's Super Crate Box is coming to bring back the glory of the golden arcade age, when all that really mattered was getting on that high score list. Grab your baseball cap and loosen your pants, it's time to fight endless hordes of enemies and collect every weapon crate you can. Prepare for an arcade delight with tight controls, refreshing game mechanics, cracking retro art and a terribly hip chiptune soundtrack.",
+
+                "category": "Arcade",
+                "price": "9.99€",
+                "release_date": "April 2019",
+                "number_of_players": "1-2",
+                "pegi": "3+",
+                "developer": "Vlambeer",
+                "publisher": "Vlambeer",
+               },
+            
+             {
+                "title": "Swimsanity!",
+                "subtitle": "Unleash Swimsanity!",
+
+                "main_image": "https://www.nintenderos.com/wp-content/uploads/2019/03/D2HNdGBU0AIgmLL.jpg",
+                "trailer": "https://www.youtube.com/watch?v=EsAR_mUzH8s",
+                "thumbnail": "https://media.nintendo.com/nintendo/bin/q8gyC5VooQn3cRUYjmvJ8ZtDsbLe1-PC/dg1Zy8JrjzJsGsPlAKDNEUFvqR6dnn_5.png",
+
+                "carousel": ["https://media.nintendo.com/nintendo/bin/ESmCYWXMHYHQvn2brECmxqXY_EhVtVbz/fu70szEdyYkO8xBzs2AxG8Vb6S4Wnwd7.jpg", "https://media.nintendo.com/nintendo/bin/e9Z9H3a38xVKgsUy6zbi1c_FAVix2v9O/rXv81zaJRPN-crMWthnk14B9PzyE35PN.jpg", "https://media.nintendo.com/nintendo/bin/9PLaEPyIy71gP4F-CPqZ3Kgjtv6z25MB/OBOmUOF-qRy_XSWIbi4A-c_YmxQSPaX-.jpg", "https://media.nintendo.com/nintendo/bin/fXXEuSExOfNnHRnWp6Umav69aaSYiOx7/omrHDytS6HWVbCeby5e2sy-r7B5w4FUn.jpg", "https://media.nintendo.com/nintendo/bin/GnWPPPmFhPcX5-5I4fX0WFOBEALXO_gc/BKp3R9s-m-_wf-N5RSGCdlX5KgRJzx5e.jpg", "https://media.nintendo.com/nintendo/bin/6eQKtQbYyH1q-M7soibYKNpYTgGYky5U/KIoBtnx2-0EnNjfPB99N7TxNawTucBwc.jpg"],
+
+                "game_info": "Swimsanity! is a multiplayer underwater shooter with action-packed Co-Op and Versus game modes, all supported by online and local play. You play as the hero Mooba, who uses a variety of unique power ups and weapons to survive in this aquatic world. Before entering any match, a player can choose from a range of eye-popping Unleashes. When a Mooba strikes enough damage on their opponents, players have the special ability to Unleash Swimsanity! to gain a major advantage in battle. Whether you're teaming up with friends to swim into Adventure mode, or clashing in competitive matches such as Last Mooba Standing, collect all 300 Gold Orbs by completing challenges across 8 action-packed Game Modes in Swimsanity! All modes can be played online or locally.",
+
+                "category": "Action, Adventure, Multiplayer",
+                "price": "14.99€",
+                "release_date": "Summer 2019",
+                "number_of_players": "1-4",
+                "pegi": "7+",
+                "developer": "Decoy Games",
+                "publisher": "Decoy Games",
+               },
+            
+            {
+                "title": "The Red Lantern!",
+                "subtitle": "The Red Lantern races onto the Nintendo Switch this year.",
+
+                "main_image": "https://media.nintendo.com/nintendo/bin/eQnlEDQhfmxqjtrp4DsJDlD4ImKukd6v/sUdc5CXn6QlUVpVvUCjgHfkug7yadypT.jpg",
+                "trailer": "https://www.youtube.com/watch?v=lSGqkEE12rI",
+                "thumbnail": "https://media.nintendo.com/nintendo/bin/RW4UI8A-9V4o3_pXptvnXJzDJ2cOsjg7/AIM8wI15tEwRtpoGVTAuaDzoRFbcbRrp.png",
+
+                "carousel": ["https://nextn-cdn-nextn.netdna-ssl.com/wp-content/uploads/2019/03/1903-20-The-Red-Lantern-01.jpg", "https://as01.epimg.net/meristation/imagenes/2019/03/21/header_image/17941711553176684.jpg", "http://images.nintendolife.com/news/2019/03/the_red_lantern_slides_onto_switch_later_this_year/large.jpg", "http://images.nintendolife.com/9330aa11f45fe/4.445x245.jpg"],
+
+                "game_info": "The Red Lantern is a rogue-lite, resource management narrative game where you and your team of 5 sled dogs, lost in the wilderness, must navigate the ever-changing events of the Alaskan bush to find your way home. Can you imagine going on a journey like this? For the brave few from around the world, the Iditarod is an incredible feat to overcome, and our friends at Timberline Studio are making this daring adventure a video game reality on Nintendo Switch. The Red Lantern is set in Nome, Alaska, where you play as The Musher as she sets out to train for the grueling Iditarod race. With your trusty crew of dogs, navigate the ever-changing landscape and events in the Alaskan wilderness as you find your way home. Combining roguelike elements into this story-driven adventure game, where hundreds of different events can occur—like fending off bears, resisting frostbite, attending your dogs, or receiving a signature moose-licking. And the Nintendo Switch version boasts gyro controls in Handheld Mode, allowing you to look around your environment with a simple turn of the system.",
+
+                "category": "Adventure, Simulation",
+                "price": "14.99€",
+                "release_date": "2019",
+                "number_of_players": "1",
+                "pegi": "12+",
+                "developer": "Timberline Studio, Inc.",
+                "publisher": "Timberline Studio, Inc.",
+               },
                     ],
 
         search: ""

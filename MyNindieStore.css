@@ -19,6 +19,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 50px;
+    padding-top: 10px;
 
 }
 
@@ -287,7 +288,77 @@ h1 {
     font-family: 'Mina', sans-serif;
     font-size: 16px;
     font-weight: bold;
-        
+
 }
 
+/*-----GAME'S MAIN DETAILS-----*/
 
+.game-main-details {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+
+}
+
+.game-main-price {
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    background: #00000087;
+    height: 25px;
+    margin-bottom: 0px;
+}
+
+.game-main-title {
+    font-family: 'Mina', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 10;
+    background: #00000087;
+    height: 35px;
+    margin-bottom: 0px;
+
+}
+
+/*-----ADD TO CART BUTTON-----*/
+
+.add-to-cart-btn {
+    background-color: #E70012;
+    border-color: #E70012;
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*-----GAME'S ADDITIONAL DETAILS-----*/
+
+.game-additional-details {
+    color: black;
+    font-family: 'Mina', sans-serif;
+    font-weight: bold;
+    background-image: url(images/Super_Mario_background.png);
+    padding-bottom: 5px;
+}
+
+.bolder-details {
+    font-size: 20px;
+    color: #E70012;
+}
+
+/*-----NINTENFOOTER-----*/
+
+.nintenfooter {
+    background: #E70012;
+    text-align: center;
+    font-family: 'Mina', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    position: sticky;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
