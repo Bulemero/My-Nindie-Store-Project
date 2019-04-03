@@ -39,12 +39,23 @@ header {
 
 .modal-main-menu {
     background-color: #E70012;
-    text-align: center;
     font-family: 'Mina', sans-serif;
     color: white;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
+
+.follow-us-btn {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.follow-us-icon {
+    font-size: 50px;
+}
+
 
 /*-----Title-----*/
 
@@ -147,11 +158,6 @@ h1 {
     height: 75px;
 }
 
-.card-body {
-    /*        background-color: black;*/
-
-}
-
 .card-title {
     display: flex;
     align-content: center;
@@ -160,7 +166,16 @@ h1 {
 }
 
 
-/*-----GAME CARDS-----*/
+/*-----BACK TO GAMES BUTTON-----*/
+
+.back-to-games-btn {
+    background-color: #E70012;
+    border-color: #E70012;
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
 
 
 
@@ -325,6 +340,14 @@ h1 {
 
 }
 
+.carousel-item {
+    height: 211px;    
+}
+
+iframe {
+    width: 375px !important;
+    height: 200px !important;
+}
 /*-----ADD TO CART BUTTON-----*/
 
 .add-to-cart-btn {
@@ -358,6 +381,7 @@ h1 {
     font-family: 'Mina', sans-serif;
     font-size: 15px;
     font-weight: bold;
+    color: white;
     position: sticky;
     padding-bottom: 5px;
     padding-top: 10px;

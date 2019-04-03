@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Nindies Store</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="MyNindieStore.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Button trigger MAIN MENU modal -->
+
+        <button type="button" class="btn btn-primary btn-in-menu" data-toggle="modal" data-target="#menuModal">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- MAIN MENU Modal -->
+
+        <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel" aria-hidden="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="menuModalLabel">Main Menu</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body modal-main-menu">
+                        <a href="index.html">Home</a>
+                        <a href="games.html">Games</a>
+                        <a href="deals.html">Deals</a>
+                        <a href="followus.html">Follow us</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <h1>My Nindies Store</h1>
+
+        <!--        Button trigger SEARCH modal-->
+
+        <button type="button" class="btn btn-primary btn-in-search" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i>
+        </button>
+
+        <!--        SEARCH modal-->
+
+        <div class="modal modal-fullscreen modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-full-search" role="document">
+                <div class="modal-content modal-complete-search">
+                    <div class="modal-body2">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class="input-group mb-3 searchField">
+                            <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary btn-in-modal" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--        Button trigger Shopping Cart-->
+
+        <button type="button" class="btn-in-cart">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+
+
+    </header>
+
+    <!--    -----FILTER COMPONENTS------->
+
+    <div class="card-group">
+        <div class="card">
+            <div class="card-body">
+                <select name="Category" class="card-title">
+                    <option value="Category">--Category--</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Arcade">Arcade</option>
+                    <option value="Platforming">Platforming</option>
+                    <option value="RPG">RPG</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <select name="Price" class="card-title">
+                    <option value="Price">--Price--</option>
+                    <option value="3.99€">3.99€</option>
+                    <option value="5.99€">5.99€</option>
+                    <option value="7.99€">7.99€</option>
+                    <option value="9.99€">9.99€</option>
+                    <option value="19.99€">19.99€</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <select name="PEGI" class="card-title">
+                    <option value="PEGI">--PEGI--</option>
+                    <option value="3">3</option>
+                    <option value="7">7</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-------GAME CARDS------->
+
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/CadenceOfHyrule/CadenceOfHyrule_main.png" alt="CadenceOfHyrule_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/Cuphead/Main_Cuphead.jpg" alt="Main_Cuphead">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/BlasterMasterZero2/BlasterMasterZero2_main.jpg" alt="BlasterMasterZero2_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/Bloodroots/Bloodroots_main.jpg" alt="Bloodroots_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/CreatureInTheWell/CreatureInTheWell_main.jpg" alt="CreatureInTheWell_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/KatanaZERO/KatanaZERO_main.jpg" alt="KatanaZERO_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/MyFriendPedro/MyFriendPedro_main.jpg" alt="MyFriendPedro_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/NeoCab/NeoCab_main.jpg" alt="NeoCab_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/NuclearThrone/NuclearThrone_main.jpg" alt="NuclearThrone_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/Overland/Overland_main.jpg" alt="Overland_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/Pine/Pine_main.jpg" alt="Pine_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/RAD/RAD_main.jpg" alt="RAD_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/StrangerThings3TheGame/StrangerThings3TheGame_main.jpg" alt="StrangerThings3TheGame_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/SuperCrateBox/SuperCrateBox_main.jpg" alt="SuperCrateBox_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/Swimsanity/Swimsanity_main.jpg" alt="Swimsanity_main">
+    </div>
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="images/TheRedLantern/TheRedLantern_main.jpg" alt="TheRedLantern_main">
+    </div>
+
+
+
+    <!-------GAMES PAGE MAIN SECTION------->
+
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/CadenceOfHyrule/CadenceOfHyrule_thumbnail.png" alt="CadenceOfHyrule_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Cadence of Hyrule</p>
+                <p class="card-text game-release">Spring 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/Cuphead/Thumbnail_Cuphead.jpg" alt="Thumbnail_Cuphead">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Cuphead</p>
+                <p class="card-text game-release">April 18, 2019</p>
+                <p class="card-text game-price"><small>19.99€</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/BlasterMasterZero2/BlasterMasterZero2_thumbnail.png" alt="BlasterMasterZero2_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Blaster Master Zero 2</p>
+                <p class="card-text game-release">March 20, 2019</p>
+                <p class="card-text game-price"><small>9.99€</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/Bloodroots/Bloodroots_thumbnail.png" alt="Bloodroots_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Bloodroots</p>
+                <p class="card-text game-release">Summer 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/CreatureInTheWell/CreatureInTheWell_thumbnail.png" alt="CreatureInTheWell_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Creature In The Well</p>
+                <p class="card-text game-release">Summer 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/KatanaZERO/KatanaZERO_thumbnail.png" alt="KatanaZERO_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Katana ZERO</p>
+                <p class="card-text game-release">April 18, 2019</p>
+                <p class="card-text game-price"><small>14.99€</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/MyFriendPedro/MyFriendPedro_thumbnail.png" alt="MyFriendPedro_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">My Friend Pedro</p>
+                <p class="card-text game-release">June 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/NeoCab/NeoCab_thumbnail.png" alt="NeoCab_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Neo Cab</p>
+                <p class="card-text game-release">Summer 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/NuclearThrone/NuclearThrone_thumbnail.png" alt="NuclearThrone_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Nuclear Throne</p>
+                <p class="card-text game-release">March 20, 2019</p>
+                <p class="card-text game-price"><small>12.99€</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/Overland/Overland_thumbnail.png" alt="Overland_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Overland</p>
+                <p class="card-text game-release">Fall 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/Pine/Pine_thumbnail.png" alt="Pine_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Pine</p>
+                <p class="card-text game-release">August 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/RAD/RAD_thumbnail.png" alt="RAD_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">RAD</p>
+                <p class="card-text game-release">Summer 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/StrangerThings3TheGame/StrangerThings3TheGame_thumbnail.png" alt="StrangerThings3TheGame_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Stranger Things 3 The Game</p>
+                <p class="card-text game-release">July 4, 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/SuperCrateBox/SuperCrateBox_thumbnail.png" alt="SuperCrateBox_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Super Crate Box</p>
+                <p class="card-text game-release">April 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group cards-in-pairs">
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/Swimsanity/Swimsanity_thumbnail.png" alt="Swimsanity_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">Swimsanity!</p>
+                <p class="card-text game-release">Summer 2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+        <div class="card two-cards">
+            <img class="card-img-top game-thumb" src="images/TheRedLantern/TheRedLantern_thumbnail.png" alt="TheRedLantern_thumbnail">
+            <div class="card-body game-info">
+                <p class="card-title game-title">The Red Lantern</p>
+                <p class="card-text game-release">2019</p>
+                <p class="card-text game-price"><small>Pending</small></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-------DEALS CARDS------->
+
+
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="images/deals/deals_1.jpg" alt="Deals_1">
+        <div class="card-img-overlay">
+            <h2 class="card-title gamer-title">Gamer Deal!!!</h2>
+            <p class="card-text gamer-disclaimer">Gamers know when the chance is right to empty their wallets...</p>
+            <p class="card-text gamer-info">If you buy 5 or more games you will get a 10% discount applied to the total price on your cart!!</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="images/deals/deals_5.jpg" alt="Deals_5">
+        <div class="card-img-overlay">
+            <h2 class="card-title friends-title">Friends Deal!!!</h2>
+            <p class="card-text friends-disclaimer">Tired of playing alone, huh??</p>
+            <p class="card-text friends-info">For every 4 games of the same type you buy, you get 1 free (pay just 3).</p>
+        </div>
+    </div>
+
+
+
+
+    <!-------FOLLOW US------->
+
+
+    <div class="socialmedia">
+        <h3 class="socialmedia-title">Follow us!</h3>
+        <p class="socialmedia-disclaimer"> Check out our Social Media for news on upcoming games!!</p>
+    </div>
+
+
+
+    <!-------GAMES DETAILS PAGE SECTION------->
+
+    <!-------Game Trailer and images Carousel------->
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_main.png" alt="Game trailer">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_01.jpg" alt="CadenceOfHyrule_01">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_02.jpg" alt="CadenceOfHyrule_02">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_03.jpg" alt="CadenceOfHyrule_03">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_04.jpg" alt="CadenceOfHyrule_04">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_05.jpg" alt="CadenceOfHyrule_05">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/CadenceOfHyrule/CadenceOfHyrule_06.jpg" alt="CadenceOfHyrule_06">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-------Game's Main Details------->
+
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="images/CadenceOfHyrule/CadenceOfHyrule_main.png" alt="CadenceOfHyrule_main">
+        <div class="card-img-overlay game-main-details">
+            <p class="card-text game-main-price">19.99€</p>
+            <h2 class="card-title game-main-title">Cadence of Hyrule</h2>
+        </div>
+    </div>
+
+    <!-------ADD TO CART BUTTON------->
+
+
+    <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn">Add to Cart</button>
+
+
+    <!-------Game's Additional Details------->
+
+    <div class="game-additional-details">
+        <h2>In the latest rhythmic action-adventure from Brace Yourself Games, you can enjoy the gameplay of Crypt of the Necrodancer in the setting of The Legend of Zelda series.</h2>
+
+        <p>As Link — or even as Princess Zelda — you’ll explore the randomly generated overworld and dungeons on a quest to save Hyrule. Every beat of each remixed, The Legend of Zelda tune is a chance to move, attack, defend, and more, so stay one step ahead of each enemy and boss… or face the music. From modern-looking Lynels to the Hyrulean Soldiers of old, you must master the instinctive movements of each pixel-art enemy, and strategically outstep them in rhythmic combat. So equip yourself with an arsenal of iconic Legend of Zelda items, as well as the spells and weapons from Crypt of the Necrodancer. You must be prepared to face Hyrule’s most wicked bosses, which have been transformed by magic, granting them mighty, new forms! A rhythmic action-adventure game in the world of the Legend of Zelda™ series. Explore the randomly generated overworld and dungeons to save Hyrule as Link or Princess Zelda. Keep the beat with 25 remixed classic Legend of Zelda™ tunes.</p>
+
+        <p><b class="bolder-details">Release Date: </b>Spring 2019</p>
+        <p><b class="bolder-details">No. of Players: </b>1-2</p>
+        <p><b class="bolder-details">Category: </b>Action, Adventure, Music</p>
+        <p><b class="bolder-details">Publisher: </b>Nintendo</p>
+        <p><b class="bolder-details">Developer: </b>Brace Yourself Games</p>
+        <p><b class="bolder-details">PEGI: </b>12+</p>
+
+    </div>
+
+    <!-------NINTENFOOTER------->
+
+    <footer>
+        <div class="nintenfooter">
+            <p>Designed by Raül Meroño Pericas</p>
+            <p>© My Nindies Store 2019</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body></html>

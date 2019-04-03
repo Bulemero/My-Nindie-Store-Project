@@ -3,13 +3,16 @@ var myVueObject = new Vue({
     data: {
 
         url: "remember you need to upload your JSON",
+        
+        active: 'nindiesMainHome',
+       
         games: [
             {
                 "title": "Cadence of Hyrule",
                 "subtitle": "In the latest rhythmic action-adventure from Brace Yourself Games, you can enjoy the gameplay of Crypt of the Necrodancer in the setting of The Legend of Zelda series.",
 
                 "main_image": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_CadenceOfHyruleCryptOfTheNecroDancerFeaturingTheLegendOfZelda_image1600w.png",
-                "trailer": "https://www.youtube.com/watch?v=oYd_pph6RnI",
+                "trailer": "https://www.youtube.com/embed/oYd_pph6RnI?start=10",
                 "thumbnail": "https://media.nintendo.com/nintendo/bin/CMNZXHGJws8aXRyQ14jlYRG0HQTWaWbF/eM-J-xwx1dNv9eBahzh16CF0-J5BohWz.png",
 
                 "carousel": ["https://media.nintendo.com/nintendo/bin/8KsTCulX3sif9q2ATfAq_RkjfKa-oDf-/DfixcCTdDmo-79kXGUTTFTWYqeUVNcFH.jpg", "https://media.nintendo.com/nintendo/bin/rrhtHBlujxsi3patWOHmn4P47c29O0CP/KFLXmQKsy0UtkLgGraHgbp84Ycu_dc9f.jpg", "https://media.nintendo.com/nintendo/bin/83gHWVdLDNmpyR4xALwdv-PLhScex8Pc/lNgkNL9rqmhZbT7emdzwouu0TctRC36u.jpg", "https://media.nintendo.com/nintendo/bin/xioDCFX3jI-b1hcZQT2-0E9uPyLLtfZy/xQCUT6qnKktIUu4-Tj-tUk3obL4HW7SH.jpg", "https://media.nintendo.com/nintendo/bin/g2FYhXsmbxDlHQ6zM1uF2DJ0PlSz57cJ/ZILbHx4L4WmCOBTFNcNXrD9GbJejs5M-.jpg", "https://o.aolcdn.com/images/dims?quality=85&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D1429%252C755%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C845%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-uploaded-images%252F2019-03%252Fbaafd630-4b30-11e9-bffa-c1d170acc868%26client%3Da1acac3e1b3290917d92%26signature%3Dcdeafa4fad05da3eeb0c92552510c5ed6ca35064&client=amp-blogside-v2&signature=a526d3c196f3ff3a294630607f7ffd72b08006e0"],
@@ -150,7 +153,7 @@ var myVueObject = new Vue({
                 "developer": "Deadtoast",
                 "publisher": "Devolver Digital",
                },
-            
+
             {
                 "title": "Neo Cab",
                 "subtitle": "An emotional survival game about staying human in a world disrupted by automation.",
@@ -171,7 +174,7 @@ var myVueObject = new Vue({
                 "developer": "Chance Agency",
                 "publisher": "Fellow Traveller",
                },
-            
+
             {
                 "title": "Nuclear Throne",
                 "subtitle": "Can you reach the Nuclear Throne?",
@@ -192,7 +195,7 @@ var myVueObject = new Vue({
                 "developer": "Vlambeer",
                 "publisher": "Vlambeer",
                },
-            
+
             {
                 "title": "Overland",
                 "subtitle": "Make some friends, find some gas, steal a car, go West.",
@@ -213,7 +216,7 @@ var myVueObject = new Vue({
                 "developer": "Finji",
                 "publisher": "Finji",
                },
-            
+
             {
                 "title": "Pine",
                 "subtitle": "Their story becomes yours.",
@@ -234,7 +237,7 @@ var myVueObject = new Vue({
                 "developer": "Twirlbound",
                 "publisher": "Kongregate",
                },
-            
+
             {
                 "title": "RAD",
                 "subtitle": "Double Apocalypse, bitchin’ mutations, and a sweet bat.",
@@ -255,7 +258,7 @@ var myVueObject = new Vue({
                 "developer": "Double Fine Productions",
                 "publisher": "BANDAI NAMCO Entertainment America Inc.",
                },
-            
+
             {
                 "title": "Stranger Things 3: The Game",
                 "subtitle": "Developed and published by BonusXP in collaboration with Netflix, Stranger Things 3: The Game is the official companion game to Season 3 of the hit original series.",
@@ -276,7 +279,7 @@ var myVueObject = new Vue({
                 "developer": "BonusXP / Netflix",
                 "publisher": "BonusXP / Netflix",
                },
-            
+
             {
                 "title": "Super Crate Box",
                 "subtitle": "Super Crate Box is coming to bring back the glory of the golden arcade age, when all that really mattered was getting on that high score list.",
@@ -297,8 +300,8 @@ var myVueObject = new Vue({
                 "developer": "Vlambeer",
                 "publisher": "Vlambeer",
                },
-            
-             {
+
+            {
                 "title": "Swimsanity!",
                 "subtitle": "Unleash Swimsanity!",
 
@@ -318,7 +321,7 @@ var myVueObject = new Vue({
                 "developer": "Decoy Games",
                 "publisher": "Decoy Games",
                },
-            
+
             {
                 "title": "The Red Lantern!",
                 "subtitle": "The Red Lantern races onto the Nintendo Switch this year.",
@@ -341,38 +344,60 @@ var myVueObject = new Vue({
                },
                     ],
 
-        search: ""
+        inputValue: "",
+
+        search: "",
+
+        chosenGame: {}
     },
 
     //    created() {
     //        this.getData()
     //    },
     //
-    //    methods: {
-    //        //------------------------------Fetch data -------------------------------------------------------------->
-    //        getData() {
+    methods: {
+
+        setPage(activePage) {
+
+            this.active = activePage;
+        },
+        searchEngine() {
+            this.search = this.inputValue;
+            this.inputValue = "";
+        },
+        resetSearch() {
+            this.search = "";
+        },
+        selectedGame(game) {
+            this.chosenGame = game;
+            console.log(this.chosenGame);
+
+        }
+
+        //        //------------------------------Fetch data -------------------------------------------------------------->
+        //        getData() {
+        //
+        //            fetch('https://api.myjson.com/bins/udbm5')
+        //                .then(response => {
+        //                    return response.json();
+        //                }).then(data => {
+        //                    // Work with JSON data here
+        //                    console.log(data);
+        //                    this.books = data.books;
+        //                    //                this.myVueObject.books = data.books;
+        //
+        //
+        //                }).catch(err => {
+        //                    // Do something for an error here
+        //                    console.log(error);
+        //                });
+        //        }
+    },
     //
-    //            fetch('https://api.myjson.com/bins/udbm5')
-    //                .then(response => {
-    //                    return response.json();
-    //                }).then(data => {
-    //                    // Work with JSON data here
-    //                    console.log(data);
-    //                    this.books = data.books;
-    //                    //                this.myVueObject.books = data.books;
-    //
-    //
-    //                }).catch(err => {
-    //                    // Do something for an error here
-    //                    console.log(error);
-    //                });
-    //        }
-    //    },
-    //
-    //    computed: {
-    //        filteredBooks: function () {
-    //
-    //            return this.books.filter((item) => item.titulo.toLowerCase().match(this.search.toLowerCase()));
-    //        }
-    //    },
+    computed: {
+        filteredGames: function () {
+
+            return this.games.filter((game) => game.title.toLowerCase().match(this.search.toLowerCase()));
+        }
+    },
 });
