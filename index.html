@@ -96,7 +96,7 @@
             <div class="card">
                 <div class="card-body">
                     <select v-model="chosenCategory" name="Category" class="card-title">
-                        <option disabled value="Category" selected>--Category--</option>
+                        <option disabled value="Category">--Category--</option>
                         <option v-for="category in categories">{{category}}</option>
                     </select>
                 </div>
@@ -105,7 +105,7 @@
             <div class="card">
                 <div class="card-body">
                     <select v-model="chosenPrice" name="Price" class="card-title">
-                        <option disabled value="Price" selected>--Price--</option>
+                        <option disabled value="Price">--Price--</option>
                         <option v-for="price in prices">{{price}}</option>
                     </select>
                 </div>
@@ -114,7 +114,7 @@
             <div class="card">
                 <div class="card-body">
                     <select v-model="chosenPegi" name="PEGI" class="card-title">
-                        <option disabled value="PEGI" selected>--PEGI--</option>
+                        <option disabled value="PEGI">--PEGI--</option>
                         <option v-for="pegi in pegis">{{pegi}}</option>
                     </select>
                 </div>
@@ -128,8 +128,9 @@
         <!-------GAME CARDS------->
 
         <div id="nindiesMainHome" data-page="nindiesMainHome" v-show="active == 'nindiesMainHome'">
-
-            <div v-for="game in filteredGames" class="card mb-3" @click="selectedGame(game), setPage('nindiesMainGameDetails')">
+            <div class="loader" v-if="!loaded">
+            </div>
+            <div v-for="game in filteredGames" class="card mb-3" v-show="loaded" @click="selectedGame(game), setPage('nindiesMainGameDetails')">
                 <img class="card-img-top" :src="game.main_image" :alt="game.title">
             </div>
         </div>
@@ -375,7 +376,7 @@
             <div class="card bg-dark text-white">
                 <img class="card-img" :src="chosenGame.main_image" :alt="chosenGame.title">
                 <div class="card-img-overlay game-main-details">
-                    <p class="card-text game-main-price">{{chosenGame.price}}</p>
+                    <p class="card-text game-main-price">{{chosenGame.price}}€</p>
                     <h2 class="card-title game-main-title">{{chosenGame.title}}</h2>
                 </div>
             </div>
@@ -383,7 +384,31 @@
             <!-------ADD TO CART BUTTON------->
 
 
-            <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn">Add to Cart</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn" data-toggle="modal" data-target="#cartModal">Add to Cart</button>
+
+
+            <!--        CART modal-->
+
+            <div class="modal modal-fullscreen modal-search fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-full-search" role="document">
+                    <div class="modal-content modal-complete-search">
+                        <div class="modal-body3">
+                            <button type="button" class="close2" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            <div class="game-summary-cart">
+                                <img class="game-thumb-cart" :src="chosenGame.thumbnail" :alt="chosenGame.title">
+                                <div class="game-info-cart">
+                                    <h2 class="game-main-title-cart">{{chosenGame.title}}</h2>
+                                    <p class="game-main-price-cart">{{chosenGame.price}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <!-------Game's Additional Details------->
@@ -395,7 +420,7 @@
 
                 <p><b class="bolder-details">Release Date: </b>{{chosenGame.release_date}}</p>
                 <p><b class="bolder-details">No. of Players: </b>{{chosenGame.number_of_players}}</p>
-                <p><b class="bolder-details">Category: </b>{{chosenGame.category}}</p>
+                <p><b class="bolder-details">Category: </b>{{getCategories(chosenGame.category)}}</p>
                 <p><b class="bolder-details">Publisher: </b>{{chosenGame.publisher}}</p>
                 <p><b class="bolder-details">Developer: </b>{{chosenGame.developer}}</p>
                 <p><b class="bolder-details">PEGI: </b>{{chosenGame.pegi}}</p>

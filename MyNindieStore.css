@@ -177,7 +177,15 @@ h1 {
     color: white;
 }
 
+/*-----LOADER-----*/
 
+.loader {
+    background-image: url(images/loader.gif);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /*-----GAMES PAGE MAIN-----*/
 
