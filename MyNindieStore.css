@@ -349,7 +349,7 @@ h1 {
 }
 
 .carousel-item {
-    height: 211px;    
+    height: 211px;
 }
 
 iframe {
@@ -357,7 +357,8 @@ iframe {
     height: 200px !important;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
     height: 30px;
     width: 30px;
     margin-top: 90px;
@@ -398,28 +399,58 @@ iframe {
 
 .game-summary-cart {
     grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.game-visual-cart {
+    width: 50%;
 }
 
 .game-thumb-cart {
     border-radius: 10px;
-    height: 60%;
     width: 60%;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    height: 70%;
 
 }
 
 .game-info-cart {
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 5;
+
+}
+
+.game-main-title-cart {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Mina', sans-serif;
+
+}
+
+.game-main-price-cart {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Mina', sans-serif;
+
+}
+
+.plusAndMinus {
+    
+}
+
+.counter {
+    width: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Mina', sans-serif;
+}
+
+#moins, #plus {
+    font-size: 18px;
 }
 
 /*-----GAME'S ADDITIONAL DETAILS-----*/

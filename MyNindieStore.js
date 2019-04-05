@@ -14,7 +14,9 @@ var myVueObject = new Vue({
         categories: [],
         prices: [],
         pegis: [],
-        loaded: false
+        loaded: false,
+        cart: [],
+        count: 1
     },
 
     methods: {
@@ -28,7 +30,7 @@ var myVueObject = new Vue({
                 }).then(function (data) {
                     console.log(data);
                     myVueObject.games = data;
-//                    console.log(myVueObject.games);
+                    //                    console.log(myVueObject.games);
                     myVueObject.getCatPricePegi();
 
                     setTimeout(function () {
@@ -79,8 +81,17 @@ var myVueObject = new Vue({
             this.pegis.sort((a, b) => a - b);
             this.prices.sort((a, b) => a - b);
             this.categories.sort();
-        }
+        },
 
+
+
+        addGames() {
+            count++;
+        },
+        
+        retrieveGames() {
+            count--;
+        }
 
     },
 
@@ -102,3 +113,18 @@ var myVueObject = new Vue({
 
     }
 });
+
+var count = 1;
+var countEl = document.getElementById("count");
+
+function plus() {
+    count++;
+    countEl.value = count;
+}
+
+function minus() {
+    if (count > 1) {
+        count--;
+        countEl.value = count;
+    }
+}
