@@ -2,7 +2,7 @@ var myVueObject = new Vue({
     el: "#app",
     data: {
 
-        url: "https://api.myjson.com/bins/xgy54",
+        url: "https://api.myjson.com/bins/kcn7k",
         active: 'nindiesMainHome',
         games: [],
         inputValue: "",
@@ -16,7 +16,6 @@ var myVueObject = new Vue({
         pegis: [],
         loaded: false,
         cart: [],
-        count: 1
     },
 
     methods: {
@@ -24,7 +23,7 @@ var myVueObject = new Vue({
         getData() {
 
             //------------------------------Fetch data -------------------------------------------------------------->
-            fetch("https://api.myjson.com/bins/xgy54")
+            fetch("https://api.myjson.com/bins/kcn7k")
                 .then(function (response) {
                     return response.json();
                 }).then(function (data) {
@@ -83,15 +82,61 @@ var myVueObject = new Vue({
             this.categories.sort();
         },
 
+        addToCart() {
 
-
-        addGames() {
-            count++;
+            if (!this.cart.includes(this.chosenGame)) {
+                this.cart.push(this.chosenGame)
+            }
+            else {
+            //accedir a l'object del cart i sumar-li +1 al count 
+                if (this.cart.includes(this.chosenGame)) {
+                    this.chosenGame.count++
+                }
+            }
         },
         
-        retrieveGames() {
-            count--;
-        }
+//        totalPrice() {
+//
+//        let sortedCart = {};
+//
+//        for (let k = 0; k < this.products.length; k++) {
+//
+//            if (!sortedCart.hasOwnProperty(this.products[k].name)) {
+//
+//                sortedCart[this.products[k].name] = {
+//                    price: this.products[k].price,
+//                    count: 1
+//                }
+//            } else {
+//                sortedCart[this.products[k].name].count++
+//            }
+//
+//        }
+//
+//        console.log(sortedCart);
+//
+//        let sumTotal = 0;
+//        for (let i = 0; i < this.products.length; i++) {
+//
+//            sumTotal += this.products[i].price;
+//
+//        }
+//
+//        if (this.products.length >= 5) {
+//            sumTotal -= sumTotal * 0.1;
+//        };
+//
+//        return sumTotal;
+
+
+
+//        addGames() {
+//            count++;
+//        },
+//        
+//        retrieveGames() {
+//            count--;
+//        }
 
     },
 
@@ -114,17 +159,17 @@ var myVueObject = new Vue({
     }
 });
 
-var count = 1;
-var countEl = document.getElementById("count");
-
-function plus() {
-    count++;
-    countEl.value = count;
-}
-
-function minus() {
-    if (count > 1) {
-        count--;
-        countEl.value = count;
-    }
-}
+//var count = 1;
+//var countEl = document.getElementById("count");
+//
+//function plus() {
+//    count++;
+//    countEl.value = count;
+//}
+//
+//function minus() {
+//    if (count > 1) {
+//        count--;
+//        countEl.value = count;
+//    }
+//}

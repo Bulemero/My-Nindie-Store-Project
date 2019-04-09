@@ -3,7 +3,7 @@
         "title": "Cadence of Hyrule",
         "subtitle": "In the latest rhythmic action-adventure from Brace Yourself Games, you can enjoy the gameplay of Crypt of the Necrodancer in the setting of The Legend of Zelda series.",
 
-        "main_image": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_CadenceOfHyruleCryptOfTheNecroDancerFeaturingTheLegendOfZelda_image1600w.png",
+        "main_image": "https://www.nintenderos.com/wp-content/uploads/2019/03/D2HOJrOUYAE__LK.jpg",
         "trailer": "https://www.youtube.com/embed/iqRIJ5NrsOM",
         "thumbnail": "https://media.nintendo.com/nintendo/bin/CMNZXHGJws8aXRyQ14jlYRG0HQTWaWbF/eM-J-xwx1dNv9eBahzh16CF0-J5BohWz.png",
 
@@ -18,6 +18,7 @@
         "pegi": 12,
         "developer": "Brace Yourself Games",
         "publisher": "Nintendo",
+        "count": 1
                },
 
     {
@@ -39,6 +40,7 @@
         "pegi": 7,
         "developer": "Studio MDHR",
         "publisher": "Studio MDHR",
+        "count": 1
                },
 
     {
@@ -60,6 +62,7 @@
         "pegi": 12,
         "developer": "INTI CREATES CO., LTD.",
         "publisher": "INTI CREATES CO., LTD.",
+        "count": 1
                },
 
     {
@@ -81,6 +84,7 @@
         "pegi": 12,
         "developer": "Paper Cult",
         "publisher": "Paper Cult",
+        "count": 1
                },
 
     {
@@ -102,6 +106,7 @@
         "pegi": 7,
         "developer": "Flight School Studio",
         "publisher": "Flight School Studio",
+        "count": 1
                },
 
     {
@@ -123,6 +128,7 @@
         "pegi": 16,
         "developer": "Askiisoft",
         "publisher": "Devolver Digital",
+        "count": 1
                },
 
     {
@@ -144,6 +150,7 @@
         "pegi": 16,
         "developer": "Deadtoast",
         "publisher": "Devolver Digital",
+        "count": 1
                },
 
     {
@@ -165,6 +172,7 @@
         "pegi": 12,
         "developer": "Chance Agency",
         "publisher": "Fellow Traveller",
+        "count": 1
                },
 
     {
@@ -186,6 +194,7 @@
         "pegi": 7,
         "developer": "Vlambeer",
         "publisher": "Vlambeer",
+        "count": 1
                },
 
     {
@@ -207,6 +216,7 @@
         "pegi": 16,
         "developer": "Finji",
         "publisher": "Finji",
+        "count": 1
                },
 
     {
@@ -228,6 +238,7 @@
         "pegi": 7,
         "developer": "Twirlbound",
         "publisher": "Kongregate",
+        "count": 1
                },
 
     {
@@ -249,6 +260,7 @@
         "pegi": 12,
         "developer": "Double Fine Productions",
         "publisher": "BANDAI NAMCO Entertainment America Inc.",
+        "count": 1
                },
 
     {
@@ -270,6 +282,7 @@
         "pegi": 12,
         "developer": "BonusXP / Netflix",
         "publisher": "BonusXP / Netflix",
+        "count": 1
                },
 
     {
@@ -291,6 +304,7 @@
         "pegi": 3,
         "developer": "Vlambeer",
         "publisher": "Vlambeer",
+        "count": 1
                },
 
     {
@@ -312,6 +326,7 @@
         "pegi": 7,
         "developer": "Decoy Games",
         "publisher": "Decoy Games",
+        "count": 1
                },
 
     {
@@ -333,5 +348,6 @@
         "pegi": 12,
         "developer": "Timberline Studio, Inc.",
         "publisher": "Timberline Studio, Inc.",
+        "count": 1
                }
 ]

@@ -98,13 +98,13 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
 
-                            <div class="game-summary-cart">
+                            <div v-for="game in cart" class="game-summary-cart">
                                 <div class="game-visual-cart">
-                                    <img class="game-thumb-cart" :src="chosenGame.thumbnail" :alt="chosenGame.title">
+                                    <img class="game-thumb-cart" :src="game.thumbnail" :alt="game.title">
                                 </div>
                                 <div class="game-info-cart">
-                                    <h2 class="game-main-title-cart">{{chosenGame.title}}</h2>
-                                    <p class="game-main-price-cart">{{chosenGame.price}}€</p>
+                                    <h2 class="game-main-title-cart">{{game.title}}</h2>
+                                    <p class="game-main-price-cart">{{game.price}}€</p>
                                     <div class="plusAndMinus">
                                         <input type="text" size="25" value="1" id="count" class="counter">
                                         <input type="button" value="-" id="moins" onclick="minus()">
@@ -421,7 +421,7 @@
             <!-------ADD TO CART BUTTON------->
 
 
-            <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn">Add to Cart</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn" @click="addToCart">Add to Cart</button>
 
 
 
