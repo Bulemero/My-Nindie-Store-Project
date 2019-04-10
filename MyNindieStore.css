@@ -11,35 +11,40 @@ body {
 /*------HEADER COMPONENTS-----*/
 
 header {
-    background-color: #E70012;
+    background-color: #e70012;
     background-size: cover;
     color: white;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
-    padding-top: 10px;
-
+    height: 70px;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 /*-----Menu button and Modal-----*/
 
+
+.fas {
+    font-size: 25px;
+}
+
 .btn-primary {
-    background-color: #E70012;
-    border-color: #E70012;
+    background-color: #e70012;
+    border-color: #e70012;
     width: 15%;
     padding: 0px;
 }
 
 .modal-header {
-    background-color: #E70012;
-    font-family: 'Mina', sans-serif;
+    background-color: #e70012;
+    font-family: "Mina", sans-serif;
 }
 
 .modal-main-menu {
-    background-color: #E70012;
-    font-family: 'Mina', sans-serif;
+    background-color: #e70012;
+    font-family: "Mina", sans-serif;
     color: white;
     display: flex;
     flex-flow: row wrap;
@@ -56,12 +61,11 @@ header {
     font-size: 50px;
 }
 
-
 /*-----Title-----*/
 
 h1 {
-    font-size: 24px;
-    font-family: 'Mina', sans-serif;
+    font-size: 28px;
+    font-family: "Mina", sans-serif;
 }
 
 /*-----Search button and modal-----*/
@@ -88,12 +92,11 @@ h1 {
     display: grid;
     grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.5%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
-
 }
 
 .close {
@@ -111,24 +114,19 @@ h1 {
 .form-control {
     background: transparent;
     border: 0px;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 25px;
     font-weight: bold;
-
 }
 
 .btn-in-modal {
     border: 0px;
 }
 
-.fas {
-    font-size: 25px;
-}
 
 .searchButtonModal {
     grid-column-start: 6;
     grid-row-start: 5;
-
 }
 
 .searchInModal {
@@ -138,8 +136,8 @@ h1 {
 /*-----Cart button-----*/
 
 .btn-in-cart {
-    background-color: #E70012;
-    border-color: #E70012;
+    background-color: #e70012;
+    border-color: #e70012;
     width: 15%;
     padding: 0px;
     border: 0px;
@@ -148,6 +146,129 @@ h1 {
 .fa-shopping-cart {
     color: white;
 }
+
+/*-----CART MODAL-----*/
+
+.modal-body3 {
+    display: flex;
+    /*
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+*/
+    flex-flow: column nowrap;
+    font-family: "Mina", sans-serif;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.close2 {
+    font-size: 2.5rem;
+    /*    grid-column-start: 10;*/
+    align-self: flex-end;
+    border: 0px;
+    background: transparent;
+}
+
+.game-shopping-cart {
+    /*
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 2;
+*/
+    justify-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    max-height: 90%;
+    overflow-y: scroll;
+}
+
+.game-summary-cart {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.game-visual-cart {
+    flex-grow: 1;
+    padding-left: 5px;
+}
+
+.game-thumb-cart {
+    border-radius: 10px;
+    width: 100px;
+    /* height: 70%; */
+}
+
+.game-info-cart {
+    /*    flex-grow: 2;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.game-main-title-cart {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Mina", sans-serif;
+    color: black;
+}
+
+.game-main-price-cart {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Mina", sans-serif;
+    margin: 0;
+    color: #1fc428;
+}
+
+.moreOrLess {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.delete-button {
+    background: transparent;
+    border: 0;
+}
+
+.fa-trash-alt {
+    color: #e70012;
+    font-size: 22px;
+}
+
+.plusAndMinus {
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.counter {
+    width: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Mina", sans-serif;
+    border: 0;
+    background: transparent;
+}
+
+#moins,
+#plus {
+    font-size: 22px;
+    border: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+}
+
 
 /*-----FILTER COMPONENTS------*/
 
@@ -165,13 +286,12 @@ h1 {
     font-size: 14px;
 }
 
-
-/*-----BACK TO GAMES BUTTON-----*/
+/*-----RESET CURRENT SEARCH BUTTON-----*/
 
 .back-to-games-btn {
-    background-color: #E70012;
-    border-color: #E70012;
-    font-family: 'Mina', sans-serif;
+    background-color: #e70012;
+    border-color: #e70012;
+    font-family: "Mina", sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -206,7 +326,7 @@ h1 {
 }
 
 .game-info {
-    border: 2px #E70012 solid;
+    border: 2px #e70012 solid;
     height: 150px;
     padding-bottom: 125px;
     border-radius: 20px;
@@ -216,7 +336,7 @@ h1 {
 .game-release,
 .game-price {
     color: white;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 18px;
     text-align: center;
     margin-bottom: 6px;
@@ -226,23 +346,20 @@ h1 {
     font-weight: bold;
 }
 
-
-
 /*-----DEALS CARDS-----*/
 
 /*-----Gamers Deal-----*/
 
-
 .gamer-title {
-    color: #E70012;
-    font-family: 'Mina', sans-serif;
+    color: #e70012;
+    font-family: "Mina", sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
 
 .gamer-disclaimer {
     color: navy;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
@@ -251,7 +368,7 @@ h1 {
 
 .gamer-info {
     color: navy;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 18px;
     font-weight: bolder;
     background-color: #f8f9fa80;
@@ -262,7 +379,7 @@ h1 {
 
 .friends-title {
     color: limegreen;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 8px;
@@ -270,7 +387,7 @@ h1 {
 
 .friends-disclaimer {
     color: #ffb725;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
@@ -279,7 +396,7 @@ h1 {
 
 .friends-info {
     color: #ffb725;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 18px;
     font-weight: bolder;
     background-color: #31323280;
@@ -298,7 +415,7 @@ h1 {
 .socialmedia-title {
     color: white;
     text-align: center;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 300px;
@@ -308,10 +425,9 @@ h1 {
 .socialmedia-disclaimer {
     color: white;
     text-align: center;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 16px;
     font-weight: bold;
-
 }
 
 /*-----GAME'S MAIN DETAILS-----*/
@@ -320,11 +436,10 @@ h1 {
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-
 }
 
 .game-main-price {
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 20px;
     font-weight: bold;
     grid-column-start: 9;
@@ -336,7 +451,7 @@ h1 {
 }
 
 .game-main-title {
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 30px;
     font-weight: bold;
     grid-column-start: 1;
@@ -345,7 +460,6 @@ h1 {
     background: #00000087;
     height: 35px;
     margin-bottom: 0px;
-
 }
 
 .carousel-item {
@@ -367,97 +481,19 @@ iframe {
 /*-----ADD TO CART BUTTON-----*/
 
 .add-to-cart-btn {
-    background-color: #E70012;
-    border-color: #E70012;
-    font-family: 'Mina', sans-serif;
+    background-color: #e70012;
+    border-color: #e70012;
+    font-family: "Mina", sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
 
-/*-----CART MODAL-----*/
-
-.close2 {
-    font-size: 2.5rem;
-    grid-column-start: 10;
-    border: 0px;
-    background: transparent;
-}
-
-
-.modal-body3 {
-    display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    font-family: 'Mina', sans-serif;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-
-}
-
-
-.game-summary-cart {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    grid-row-start: 4;
-    grid-row-end: 7;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.game-visual-cart {
-    width: 50%;
-}
-
-.game-thumb-cart {
-    border-radius: 10px;
-    width: 60%;
-    height: 70%;
-
-}
-
-.game-info-cart {
-
-}
-
-.game-main-title-cart {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Mina', sans-serif;
-
-}
-
-.game-main-price-cart {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Mina', sans-serif;
-
-}
-
-.plusAndMinus {
-    
-}
-
-.counter {
-    width: 30px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Mina', sans-serif;
-}
-
-#moins, #plus {
-    font-size: 18px;
-}
 
 /*-----GAME'S ADDITIONAL DETAILS-----*/
 
 .game-additional-details {
     color: black;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-weight: bold;
     background-image: url(images/Super_Mario_background.png);
     padding-bottom: 5px;
@@ -465,15 +501,15 @@ iframe {
 
 .bolder-details {
     font-size: 20px;
-    color: #E70012;
+    color: #e70012;
 }
 
 /*-----NINTENFOOTER-----*/
 
 .nintenfooter {
-    background: #E70012;
+    background: #e70012;
     text-align: center;
-    font-family: 'Mina', sans-serif;
+    font-family: "Mina", sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: white;

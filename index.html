@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>My Nindies Store</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="MyNindieStore.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="MyNindieStore.css" />
 </head>
 
 <body>
-
     <div id="app">
-
         <header>
-
             <!-- Button trigger MAIN MENU modal -->
 
             <button type="button" class="btn btn-primary btn-in-menu" data-toggle="modal" data-target="#menuModal">
@@ -43,21 +37,21 @@
                             </button>
                         </div>
                         <div class="modal-body modal-main-menu">
-                            <a v-on:click="setPage('nindiesMainHome')" class="navbar-text active" data-dismiss="modal"><img src="images/icons/nintendo_switch_game_icon_white.png" width="50" height="50" class="d-block align-top" alt="Home">Home</a>
+                            <a v-on:click="setPage('nindiesMainHome')" class="navbar-text active" data-dismiss="modal"><img src="images/icons/nintendo_switch_game_icon_white.png" width="50" height="50" class="d-block align-top" alt="Home" />Home</a>
                             <!--<a v-on:click="setPage('nindiesMainGames')" class="navbar-text active" data-dismiss="modal"><img src="images/icons/nintendo_switch_game_icon_white.png" width="50" height="50" class="d-block align-top" alt="Home">Games</a>-->
-                            <a v-on:click="setPage('nindiesMainDeals')" class="navbar-text active" data-dismiss="modal"><img src="images/icons/deal_icon_white.png" width="50" height="50" class="d-block align-top" alt="Home">Deals</a>
+                            <a v-on:click="setPage('nindiesMainDeals')" class="navbar-text active" data-dismiss="modal"><img src="images/icons/deal_icon_white.png" width="50" height="50" class="d-block align-top" alt="Home" />Deals</a>
                             <a v-on:click="setPage('nindiesMainFollowUs')" class="navbar-text active follow-us-btn" data-dismiss="modal"><i class="fas fa-thumbs-up follow-us-icon"></i>Follow us</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <h1>My Nindies Store</h1>
 
             <!--        Button trigger SEARCH modal-->
 
-            <button type="button" class="btn btn-primary btn-in-search" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i>
+            <button type="button" class="btn btn-primary btn-in-search" data-toggle="modal" data-target="#searchModal">
+                <i class="fas fa-search"></i>
             </button>
 
             <!--        SEARCH modal-->
@@ -71,9 +65,11 @@
                             </button>
 
                             <div class="input-group mb-3 searchField">
-                                <input id="searchButton" v-model="inputValue" type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input id="searchButton" v-model="inputValue" type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2" />
                                 <div class="input-group-append">
-                                    <button v-on:click="searchEngine" data-dismiss="modal" class="btn btn-outline-secondary btn-in-modal" type="button"><i class="fas fa-search"></i></button>
+                                    <button v-on:click="searchEngine" data-dismiss="modal" class="btn btn-outline-secondary btn-in-modal" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -83,11 +79,48 @@
 
             <!--        Button trigger Shopping Cart-->
 
-            <button type="button" class="btn-in-cart">
+            <button type="button" class="btn-in-cart" data-toggle="modal" data-target="#cartModal">
                 <i class="fas fa-shopping-cart"></i>
             </button>
 
+            <!--        CART modal-->
 
+            <div class="modal modal-fullscreen modal-search fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-full-search" role="document">
+                    <div class="modal-content modal-complete-search">
+                        <div class="modal-body3">
+                            <button type="button" class="close2" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="game-shopping-cart">
+                                <div v-for="game in cart" class="game-summary-cart">
+                                    <div class="game-visual-cart">
+                                        <img @click="selectedGame(game), setPage('nindiesMainGameDetails')" data-dismiss="modal" class="game-thumb-cart" :src="game.thumbnail" :alt="game.title" />
+                                    </div>
+                                    <div class="game-info-cart">
+                                        <h2 class="game-main-title-cart">{{ game.title }}</h2>
+                                        <p class="game-main-price-cart">{{ game.price }}€</p>
+                                        <div class="moreOrLess">
+                                            <button class="delete-button"><i class="fas fa-trash-alt"></i></button>
+                                            <div class="plusAndMinus">
+                                                <input type="text" size="25" :value="game.count" id="count" class="counter" />
+                                                <input type="button" value="-" id="moins" @click="retrieveFromCart(game)" />
+                                                <input type="button" value="+" id="plus" @click="addToCart(game)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div>
+                                <button>Add more games</button>
+                                <button>Go to checkout</button>
+                            </div>
+-->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-------FILTER COMPONENTS------->
@@ -97,7 +130,7 @@
                 <div class="card-body">
                     <select v-model="chosenCategory" name="Category" class="card-title">
                         <option disabled value="Category">--Category--</option>
-                        <option v-for="category in categories">{{category}}</option>
+                        <option v-for="category in categories">{{ category }}</option>
                     </select>
                 </div>
             </div>
@@ -106,7 +139,7 @@
                 <div class="card-body">
                     <select v-model="chosenPrice" name="Price" class="card-title">
                         <option disabled value="Price">--Price--</option>
-                        <option v-for="price in prices">{{price}}</option>
+                        <option v-for="price in prices">{{ price }}</option>
                     </select>
                 </div>
             </div>
@@ -115,26 +148,26 @@
                 <div class="card-body">
                     <select v-model="chosenPegi" name="PEGI" class="card-title">
                         <option disabled value="PEGI">--PEGI--</option>
-                        <option v-for="pegi in pegis">{{pegi}}</option>
+                        <option v-for="pegi in pegis">{{ pegi }}</option>
                     </select>
                 </div>
             </div>
         </div>
 
-        <!-------BACK TO GAMES BUTTON------->
+        <!-------RESET CURRENT SEARCH BUTTON------->
 
-        <button v-on:click="resetSearch" v-if="this.search !== ''" type="button" class="btn btn-terciary btn-lg btn-block back-to-games-btn">Reset Current Search</button>
+        <button v-on:click="resetSearch" v-if="this.search !== ''" type="button" class="btn btn-terciary btn-lg btn-block back-to-games-btn">
+            Reset Current Search
+        </button>
 
         <!-------GAME CARDS------->
 
         <div id="nindiesMainHome" data-page="nindiesMainHome" v-show="active == 'nindiesMainHome'">
-            <div class="loader" v-if="!loaded">
-            </div>
+            <div class="loader" v-if="!loaded"></div>
             <div v-for="game in filteredGames" class="card mb-3" v-show="loaded" @click="selectedGame(game), setPage('nindiesMainGameDetails')">
-                <img class="card-img-top" :src="game.main_image" :alt="game.title">
+                <img class="card-img-top" :src="game.main_image" :alt="game.title" />
             </div>
         </div>
-
 
         <!-------GAMES PAGE MAIN SECTION------->
 
@@ -298,55 +331,55 @@
         </div>
 -->
 
-
-
         <!-------DEALS CARDS------->
 
         <div id="nindiesMainDeals" data-page="nindiesMainDeals" v-show="active == 'nindiesMainDeals'">
-
             <div class="card bg-dark text-white">
-                <img class="card-img" src="images/deals/deals_1.jpg" alt="Deals_1">
+                <img class="card-img" src="images/deals/deals_1.jpg" alt="Deals_1" />
                 <div class="card-img-overlay">
                     <h2 class="card-title gamer-title">Gamer Deal!!!</h2>
-                    <p class="card-text gamer-disclaimer">Gamers know when the chance is right to empty their wallets...</p>
-                    <p class="card-text gamer-info">If you buy 5 or more games you will get a 10% discount applied to the total price on your cart!!</p>
+                    <p class="card-text gamer-disclaimer">
+                        Gamers know when the chance is right to empty their wallets...
+                    </p>
+                    <p class="card-text gamer-info">
+                        If you buy 5 or more games you will get a 10% discount applied to
+                        the total price on your cart!!
+                    </p>
                 </div>
             </div>
 
             <div class="card bg-dark text-white">
-                <img class="card-img" src="images/deals/deals_5.jpg" alt="Deals_5">
+                <img class="card-img" src="images/deals/deals_5.jpg" alt="Deals_5" />
                 <div class="card-img-overlay">
                     <h2 class="card-title friends-title">Friends Deal!!!</h2>
-                    <p class="card-text friends-disclaimer">Tired of playing alone, huh??</p>
-                    <p class="card-text friends-info">For every 4 games of the same type you buy, you get 1 free (pay just 3).</p>
+                    <p class="card-text friends-disclaimer">
+                        Tired of playing alone, huh??
+                    </p>
+                    <p class="card-text friends-info">
+                        For every 4 games of the same type you buy, you get 1 free (pay
+                        just 3).
+                    </p>
                 </div>
             </div>
-
         </div>
-
 
         <!-------FOLLOW US------->
 
         <div id="nindiesMainFollowUs" data-page="nindiesMainFollowUs" v-show="active == 'nindiesMainFollowUs'">
-
-
             <div class="socialmedia">
                 <h3 class="socialmedia-title">Follow us!</h3>
-                <p class="socialmedia-disclaimer"> Check out our Social Media for news on upcoming games!!</p>
+                <p class="socialmedia-disclaimer">
+                    Check out our Social Media for news on upcoming games!!
+                </p>
             </div>
-
         </div>
-
 
         <!-------GAMES DETAILS PAGE SECTION------->
 
         <!-------Game Trailer and images Carousel------->
 
         <div id="nindiesMainGameDetails" data-page="nindiesMainGameDetails" v-if="active == 'nindiesMainGameDetails'">
-
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval=false>
-
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
                     <li v-for="(image, index) in chosenGame.carousel" data-target="#carouselExampleControls" :data-slide-to="index"></li>
@@ -357,7 +390,7 @@
                         <iframe width="560" height="315" :src="chosenGame.trailer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div v-for="(image, index) in chosenGame.carousel" class="carousel-item">
-                        <img class="d-block w-100" :src="image" :alt=`${chosenGame.title}_${index}`>
+                        <img class="d-block w-100" :src="image" :alt="`${chosenGame.title}_${index}`" />
                     </div>
                 </div>
 
@@ -374,57 +407,42 @@
             <!-------Game's Main Details------->
 
             <div class="card bg-dark text-white">
-                <img class="card-img" :src="chosenGame.main_image" :alt="chosenGame.title">
+                <img class="card-img" :src="chosenGame.main_image" :alt="chosenGame.title" />
                 <div class="card-img-overlay game-main-details">
-                    <p class="card-text game-main-price">{{chosenGame.price}}€</p>
-                    <h2 class="card-title game-main-title">{{chosenGame.title}}</h2>
+                    <p class="card-text game-main-price">{{ chosenGame.price }}€</p>
+                    <h2 class="card-title game-main-title">{{ chosenGame.title }}</h2>
                 </div>
             </div>
 
             <!-------ADD TO CART BUTTON------->
 
-
-            <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn" data-toggle="modal" data-target="#cartModal">Add to Cart</button>
-
-
-            <!--        CART modal-->
-
-            <div class="modal modal-fullscreen modal-search fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-full-search" role="document">
-                    <div class="modal-content modal-complete-search">
-                        <div class="modal-body3">
-                            <button type="button" class="close2" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-
-                            <div class="game-summary-cart">
-                                <img class="game-thumb-cart" :src="chosenGame.thumbnail" :alt="chosenGame.title">
-                                <div class="game-info-cart">
-                                    <h2 class="game-main-title-cart">{{chosenGame.title}}</h2>
-                                    <p class="game-main-price-cart">{{chosenGame.price}}</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <button type="button" class="btn btn-secondary btn-lg btn-block add-to-cart-btn" @click="addToCart(chosenGame)">
+                Add to Cart
+            </button>
 
             <!-------Game's Additional Details------->
 
             <div class="game-additional-details">
-                <h2>{{chosenGame.subtitle}}</h2>
+                <h2>{{ chosenGame.subtitle }}</h2>
 
-                <p>{{chosenGame.game_info}}</p>
+                <p>{{ chosenGame.game_info }}</p>
 
-                <p><b class="bolder-details">Release Date: </b>{{chosenGame.release_date}}</p>
-                <p><b class="bolder-details">No. of Players: </b>{{chosenGame.number_of_players}}</p>
-                <p><b class="bolder-details">Category: </b>{{getCategories(chosenGame.category)}}</p>
-                <p><b class="bolder-details">Publisher: </b>{{chosenGame.publisher}}</p>
-                <p><b class="bolder-details">Developer: </b>{{chosenGame.developer}}</p>
-                <p><b class="bolder-details">PEGI: </b>{{chosenGame.pegi}}</p>
-
+                <p>
+                    <b class="bolder-details">Release Date: </b>{{ chosenGame.release_date }}
+                </p>
+                <p>
+                    <b class="bolder-details">No. of Players: </b>{{ chosenGame.number_of_players }}
+                </p>
+                <p>
+                    <b class="bolder-details">Category: </b>{{ getCategories(chosenGame.category) }}
+                </p>
+                <p>
+                    <b class="bolder-details">Publisher: </b>{{ chosenGame.publisher }}
+                </p>
+                <p>
+                    <b class="bolder-details">Developer: </b>{{ chosenGame.developer }}
+                </p>
+                <p><b class="bolder-details">PEGI: </b>{{ chosenGame.pegi }}</p>
             </div>
         </div>
 
@@ -436,7 +454,6 @@
                 <p>© My Nindies Store 2019</p>
             </div>
         </footer>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -446,6 +463,4 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
     <script src="MyNindieStore.js"></script>
-
-
 </body></html>
