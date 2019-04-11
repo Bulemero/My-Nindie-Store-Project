@@ -92,8 +92,16 @@
                             <button type="button" class="close2" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
+
+                            <h1 class="shopping-cart-header">Shopping Cart</h1>
+
+                            <div v-show="cart.length === 0" class="no-games-on-cart">
+                                <p>Ooops!! Looks like your cart is empty... Click on <b>"Add more games"</b> to continue shopping!</p>
+                                <img src="images/DK_empty_cart2.png" alt="DK_empty_cart" class="dk-empty">
+                            </div>
+
                             <div class="game-shopping-cart">
-                                <div v-for="game in cart" class="game-summary-cart">
+                                <div v-for="(game, index) in cart" :key="index" class="game-summary-cart">
                                     <div class="game-visual-cart">
                                         <img @click="selectedGame(game), setPage('nindiesMainGameDetails')" data-dismiss="modal" class="game-thumb-cart" :src="game.thumbnail" :alt="game.title" />
                                     </div>
@@ -101,7 +109,7 @@
                                         <h2 class="game-main-title-cart">{{ game.title }}</h2>
                                         <p class="game-main-price-cart">{{ game.price }}€</p>
                                         <div class="moreOrLess">
-                                            <button class="delete-button"><i class="fas fa-trash-alt"></i></button>
+                                            <button @click="deleteFromCart(index)" class="delete-button"><i class="fas fa-trash-alt"></i></button>
                                             <div class="plusAndMinus">
                                                 <input type="text" size="25" :value="game.count" id="count" class="counter" />
                                                 <input type="button" value="-" id="moins" @click="retrieveFromCart(game)" />
@@ -111,12 +119,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--
+
                             <div>
-                                <button>Add more games</button>
-                                <button>Go to checkout</button>
+                                <button @click="setPage('nindiesMainHome')" data-dismiss="modal" type="button" class="btn btn-terciary btn-lg btn-block add-more-games">Add more games</button>
+                                <!--    <button>Checkout</button>-->
+
                             </div>
--->
                         </div>
                     </div>
                 </div>
@@ -334,31 +342,35 @@
         <!-------DEALS CARDS------->
 
         <div id="nindiesMainDeals" data-page="nindiesMainDeals" v-show="active == 'nindiesMainDeals'">
-            <div class="card bg-dark text-white">
-                <img class="card-img" src="images/deals/deals_1.jpg" alt="Deals_1" />
-                <div class="card-img-overlay">
-                    <h2 class="card-title gamer-title">Gamer Deal!!!</h2>
-                    <p class="card-text gamer-disclaimer">
-                        Gamers know when the chance is right to empty their wallets...
-                    </p>
-                    <p class="card-text gamer-info">
-                        If you buy 5 or more games you will get a 10% discount applied to
-                        the total price on your cart!!
-                    </p>
+            <div class="gamer-deal">
+                <div class="card bg-dark text-white">
+                    <img class="card-img gamer-deal-img" src="images/deals/deals_1.jpg" alt="Deals_1" />
+                    <div class="card-img-overlay">
+                        <h2 class="card-title gamer-title">Gamer Deal!!!</h2>
+                        <p class="card-text gamer-disclaimer">
+                            Gamers know when the chance is right to empty their wallets...
+                        </p>
+                        <p class="card-text gamer-info">
+                            If you buy 5 or more games you will get a 10% discount applied to
+                            the total price on your cart!!
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="card bg-dark text-white">
-                <img class="card-img" src="images/deals/deals_5.jpg" alt="Deals_5" />
-                <div class="card-img-overlay">
-                    <h2 class="card-title friends-title">Friends Deal!!!</h2>
-                    <p class="card-text friends-disclaimer">
-                        Tired of playing alone, huh??
-                    </p>
-                    <p class="card-text friends-info">
-                        For every 4 games of the same type you buy, you get 1 free (pay
-                        just 3).
-                    </p>
+            <div class="friends-deal">
+                <div class="card bg-dark text-white">
+                    <img class="card-img friends-deal-img" src="images/deals/deals_5.jpg" alt="Deals_5" />
+                    <div class="card-img-overlay">
+                        <h2 class="card-title friends-title">Friends Deal!!!</h2>
+                        <p class="card-text friends-disclaimer">
+                            Tired of playing alone, huh??
+                        </p>
+                        <p class="card-text friends-info">
+                            For every 4 games of the same type you buy, you get 1 free (pay
+                            just 3).
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -463,5 +475,5 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
     <script src="MyNindieStore.js"></script>
-    
+
 </body></html>

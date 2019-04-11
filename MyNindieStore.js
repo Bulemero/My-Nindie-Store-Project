@@ -110,6 +110,13 @@ var myVueObject = new Vue({
         deleteFromCart(regret) {
             console.log(regret);
                 this.cart.splice(regret, 1);
+        },
+        
+        gameTotal(total) {
+            if (!this.cart.length === 0) {
+                total += this.cart.price * this.cart.count;
+            }
+            console.log(total);
         }
 
         //        totalPrice() {

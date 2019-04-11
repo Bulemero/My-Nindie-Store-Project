@@ -149,6 +149,29 @@ h1 {
 
 /*-----CART MODAL-----*/
 
+.shopping-cart-header {
+    font-family: "Mina", sans-serif;
+    color: #e70012;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 3px #e70012 solid;
+    border-top: 3px #e70012 solid;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.no-games-on-cart {
+    color: black;
+    font-family: "Mina", sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.dk-empty {
+    height: 280px;
+}
+
 .modal-body3 {
     display: flex;
     /*
@@ -269,6 +292,26 @@ h1 {
     background: transparent;
 }
 
+.shopping-cart-total {
+    color: black;
+    font-family: "Mina", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 2px black solid;
+    text-align: right;
+}
+
+
+.add-more-games {
+    background-color: #e70012;
+    border-color: #e70012;
+    font-family: "Mina", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
 
 /*-----FILTER COMPONENTS------*/
 
