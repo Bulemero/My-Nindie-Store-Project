@@ -54,6 +54,11 @@ var myVueObject = new Vue({
             this.chosenGame = game;
             console.log(this.chosenGame);
         },
+
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        },
+
         getCategories(categoriesList) {
             return categoriesList.join(", ");
         },
@@ -101,9 +106,10 @@ var myVueObject = new Vue({
                 });
             }
         },
-        
-        deleteFromCart() {
-            
+
+        deleteFromCart(regret) {
+            console.log(regret);
+                this.cart.splice(regret, 1);
         }
 
         //        totalPrice() {
@@ -157,5 +163,3 @@ var myVueObject = new Vue({
         this.getData();
     }
 });
-
-

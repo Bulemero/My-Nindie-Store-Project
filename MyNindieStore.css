@@ -348,7 +348,22 @@ h1 {
 
 /*-----DEALS CARDS-----*/
 
+
+.gamer-deal,
+.friends-deal {
+    margin: 0px 0px 15px 0px;
+}
+
+.gamer-deal-img,
+.friends-deal-img {
+/*
+    border: 1px solid black;
+    border-radius: 30px;
+*/
+}
+
 /*-----Gamers Deal-----*/
+
 
 .gamer-title {
     color: #e70012;
@@ -496,7 +511,7 @@ iframe {
     font-family: "Mina", sans-serif;
     font-weight: bold;
     background-image: url(images/Super_Mario_background.png);
-    padding-bottom: 5px;
+    padding: 5px;
 }
 
 .bolder-details {

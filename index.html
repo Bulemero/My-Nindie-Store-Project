@@ -164,7 +164,7 @@
 
         <div id="nindiesMainHome" data-page="nindiesMainHome" v-show="active == 'nindiesMainHome'">
             <div class="loader" v-if="!loaded"></div>
-            <div v-for="game in filteredGames" class="card mb-3" v-show="loaded" @click="selectedGame(game), setPage('nindiesMainGameDetails')">
+            <div v-for="game in filteredGames" class="card mb-3" v-show="loaded" @click="selectedGame(game), setPage('nindiesMainGameDetails'), scrollToTop()">
                 <img class="card-img-top" :src="game.main_image" :alt="game.title" />
             </div>
         </div>
@@ -463,4 +463,5 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
     <script src="MyNindieStore.js"></script>
+    
 </body></html>
