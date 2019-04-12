@@ -78,8 +78,8 @@
             </div>
 
             <!--        Button trigger Shopping Cart-->
-
-            <button type="button" class="btn-in-cart" data-toggle="modal" data-target="#cartModal">
+            <button type="button" class="btn-in-cart cart-btn-with-counter" data-toggle="modal" data-target="#cartModal">
+               <div v-if="cart.length > 0"><p class="cart-counter">{{cart.length}}</p></div>
                 <i class="fas fa-shopping-cart"></i>
             </button>
 
@@ -109,7 +109,7 @@
                                         <h2 class="game-main-title-cart">{{ game.title }}</h2>
                                         <p class="game-main-price-cart">{{ game.price }}€</p>
                                         <div class="moreOrLess">
-                                            <button @click="deleteFromCart(index)" class="delete-button"><i class="fas fa-trash-alt"></i></button>
+                                            <button @click="deleteFromCart(game, index)" class="delete-button"><i class="fas fa-trash-alt"></i></button>
                                             <div class="plusAndMinus">
                                                 <input type="text" size="25" :value="game.count" id="count" class="counter" />
                                                 <input type="button" value="-" id="moins" @click="retrieveFromCart(game)" />
@@ -120,7 +120,7 @@
                                 </div>
                             </div>
                             
-                            <div v-show="cart.length > 0" class="shopping-cart-total"><p>Total: {{gameTotal(total)}}</p></div>
+                            <div v-show="cart.length > 0" class="shopping-cart-total"><p>Total price: {{gameTotal}}€</p></div>
 
                             <div>
                                 <button @click="setPage('nindiesMainHome')" data-dismiss="modal" type="button" class="btn btn-terciary btn-lg btn-block add-more-games">Add more games</button>
@@ -179,168 +179,7 @@
             </div>
         </div>
 
-        <!-------GAMES PAGE MAIN SECTION------->
-
-        <!--
-        
-        <div id="nindiesMainGames" data-page="nindiesMainGames" v-show="active == 'nindiesMainGames'">
-
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/CadenceOfHyrule/CadenceOfHyrule_thumbnail.png" alt="CadenceOfHyrule_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Cadence of Hyrule</p>
-                        <p class="card-text game-release">Spring 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/Cuphead/Thumbnail_Cuphead.jpg" alt="Thumbnail_Cuphead">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Cuphead</p>
-                        <p class="card-text game-release">April 18, 2019</p>
-                        <p class="card-text game-price"><small>19.99€</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/BlasterMasterZero2/BlasterMasterZero2_thumbnail.png" alt="BlasterMasterZero2_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Blaster Master Zero 2</p>
-                        <p class="card-text game-release">March 20, 2019</p>
-                        <p class="card-text game-price"><small>9.99€</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/Bloodroots/Bloodroots_thumbnail.png" alt="Bloodroots_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Bloodroots</p>
-                        <p class="card-text game-release">Summer 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/CreatureInTheWell/CreatureInTheWell_thumbnail.png" alt="CreatureInTheWell_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Creature In The Well</p>
-                        <p class="card-text game-release">Summer 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/KatanaZERO/KatanaZERO_thumbnail.png" alt="KatanaZERO_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Katana ZERO</p>
-                        <p class="card-text game-release">April 18, 2019</p>
-                        <p class="card-text game-price"><small>14.99€</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/MyFriendPedro/MyFriendPedro_thumbnail.png" alt="MyFriendPedro_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">My Friend Pedro</p>
-                        <p class="card-text game-release">June 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/NeoCab/NeoCab_thumbnail.png" alt="NeoCab_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Neo Cab</p>
-                        <p class="card-text game-release">Summer 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/NuclearThrone/NuclearThrone_thumbnail.png" alt="NuclearThrone_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Nuclear Throne</p>
-                        <p class="card-text game-release">March 20, 2019</p>
-                        <p class="card-text game-price"><small>12.99€</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/Overland/Overland_thumbnail.png" alt="Overland_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Overland</p>
-                        <p class="card-text game-release">Fall 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/Pine/Pine_thumbnail.png" alt="Pine_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Pine</p>
-                        <p class="card-text game-release">August 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/RAD/RAD_thumbnail.png" alt="RAD_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">RAD</p>
-                        <p class="card-text game-release">Summer 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/StrangerThings3TheGame/StrangerThings3TheGame_thumbnail.png" alt="StrangerThings3TheGame_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Stranger Things 3 The Game</p>
-                        <p class="card-text game-release">July 4, 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/SuperCrateBox/SuperCrateBox_thumbnail.png" alt="SuperCrateBox_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Super Crate Box</p>
-                        <p class="card-text game-release">April 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group cards-in-pairs">
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/Swimsanity/Swimsanity_thumbnail.png" alt="Swimsanity_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">Swimsanity!</p>
-                        <p class="card-text game-release">Summer 2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-                <div class="card two-cards">
-                    <img class="card-img-top game-thumb" src="images/TheRedLantern/TheRedLantern_thumbnail.png" alt="TheRedLantern_thumbnail">
-                    <div class="card-body game-info">
-                        <p class="card-title game-title">The Red Lantern</p>
-                        <p class="card-text game-release">2019</p>
-                        <p class="card-text game-price"><small>Pending</small></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
--->
-
+       
         <!-------DEALS CARDS------->
 
         <div id="nindiesMainDeals" data-page="nindiesMainDeals" v-show="active == 'nindiesMainDeals'">

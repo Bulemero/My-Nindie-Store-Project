@@ -135,16 +135,38 @@ h1 {
 
 /*-----Cart button-----*/
 
+.cart-btn-with-counter {
+    width: 35px;
+    margin-right: 5px;
+}
+
 .btn-in-cart {
     background-color: #e70012;
     border-color: #e70012;
     width: 15%;
     padding: 0px;
     border: 0px;
+    color: white;
+}
+
+.cart-counter {
+    background: #1876f6;
+    border: 1px white solid;
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    margin: 0;
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    display: inline-table;
+
 }
 
 .fa-shopping-cart {
     color: white;
+
 }
 
 /*-----CART MODAL-----*/
@@ -295,12 +317,12 @@ h1 {
 .shopping-cart-total {
     color: black;
     font-family: "Mina", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    border: 2px black solid;
-    text-align: right;
+    padding-top: 5px;
+    border-top: 2px black double;
+    border-bottom: 2px black double;
+    text-align: end;
 }
 
 
@@ -399,7 +421,7 @@ h1 {
 
 .gamer-deal-img,
 .friends-deal-img {
-/*
+    /*
     border: 1px solid black;
     border-radius: 30px;
 */

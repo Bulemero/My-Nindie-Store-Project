@@ -107,16 +107,10 @@ var myVueObject = new Vue({
             }
         },
 
-        deleteFromCart(regret) {
-            console.log(regret);
-                this.cart.splice(regret, 1);
-        },
-        
-        gameTotal(total) {
-            if (!this.cart.length === 0) {
-                total += this.cart.price * this.cart.count;
-            }
-            console.log(total);
+        deleteFromCart(game, regret) {
+            game.count = 1;
+            this.cart.splice(regret, 1);
+
         }
 
         //        totalPrice() {
@@ -164,6 +158,16 @@ var myVueObject = new Vue({
             //            game.price.includes(this.chosenPrice))
             //            .filter((game) =>
             //            game.pegi.includes(this.chosenPegi))
+        },
+
+        gameTotal() {
+            let total = 0;
+            if (this.cart.length > 0) {
+                this.cart.forEach(game => {
+                    total += game.price * game.count;
+                })
+            }
+            return total.toFixed(2);
         }
     },
     created() {
